@@ -1,0 +1,5 @@
+[Strongroom.plug]
+exec=Strongroom
+icon=preferences-desktop-sound
+title=Backup
+category=Personal
