@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  	<schema path="/org/pantheon/switchboard/plug/backup/" id="org.pantheon.switchboard.plug.backup" gettext-domain="switchboard">
+    		<key name="search-path" type="s">
+				<default>"/home"</default>
+				<summary>The path used to search for files</summary>
+			</key>
+			<key name="target-path" type="s">
+				<default>"/home"</default>
+				<summary>The path used to store the backup files</summary>
+			</key>
+			<key name="document" type="b">
+				<default>true</default>
+				<summary>Is document backup enabled</summary>
+			</key>
+			<key name="document-file-types" type="s">
+				<default>".epub;.txt;.pdf;.odt;.doc;.docx;.ptt;.pttx;.xls;.xlsx"</default>
+				<summary>The files types it will look for when document is enabled. separated with ';'</summary>
+			</key>
+    		<key name="picture" type="b">
+				<default>true</default>
+				<summary>Is picutre files backup enabled</summary>
+			</key>
+			<key name="picture-file-types" type="s">
+				<default>".jpg;.jpeg;.png;.bmp;.jng;.gif;.raw"</default>
+				<summary>The files types it will look for when picture is enabled. separated with ';'</summary>
+			</key>
+    		<key name="video" type="b">
+				<default>true</default>
+				<summary>Is video files backup enabled</summary>
+			</key>
+			<key name="video-file-types" type="s">
+				<default>".mp4;.mpg;.avi;.mpeg;.mkv;.webm;.mov;.3gp;.m1v;.m2v;.m4v;.flv"</default>
+				<summary>The files types it will look for when video is enabled. separated with ';'</summary>
+			</key>
+    		<key name="audio" type="b">
+				<default>false</default>
+				<summary>Is audio files backup enabled</summary>
+			</key>
+			<key name="audio-file-types" type="s">
+				<default>".mp3;.aac"</default>
+				<summary>The files types it will look for when audio is enabled. separated with ';'</summary>
+			</key>
+  	</schema>
+</schemalist>
