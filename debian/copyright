@@ -1,14 +1,10 @@
-This work was packaged for Debian by:
-
-    Sergey "Shnatsel" Davidoff <shnatsel@gmail.com> on Sun, 11 Dec 2011 02:45:48 +0300
-
 Upstream Author(s):
 
-    Ivo Nunes <ivo@elementaryos.org>
+    Kay van der Zander <kay20@hotmail.com>
 
 Copyright:
 
-    Copyright (C) 2012 Ivo Nunes
+    Copyright (C) 2021 Kay van der Zander
 
 License:
 
@@ -30,6 +26,6 @@ Public License version 3 can be found in "/usr/share/common-licenses/GPL-3".
 
 The Debian packaging is:
 
-    Copyright (C) 2011 Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+    Copyright (C) 2021 Kay van der Zander <kay20@hotmail.com>
 
 and is licensed under the GPL version 3, see above.
