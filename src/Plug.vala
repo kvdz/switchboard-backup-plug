@@ -61,9 +61,6 @@ public class Backup.Plug : Switchboard.Plug {
         main_grid.margin_top = 128;
         main_grid.halign = Gtk.Align.CENTER;
 
-        main_grid.attach (audio_label, 1, 4, 1, 1);
-        main_grid.attach_next_to (audio_switch, audio_label, Gtk.PositionType.RIGHT, 2, 1);
-
         /* BACKUP BUTTON */
         Gtk.Button backup_button = new Gtk.Button.with_label (_("Start backup"));
         backup_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
