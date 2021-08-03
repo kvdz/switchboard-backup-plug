@@ -1,10 +1,9 @@
-//
-//  Copyright (C) 2021 Kay van der Zander
-//
-
+/*
+ *   Copyright (C) 2021 Kay van der Zander
+ */
 
 public class Backup.Plug : Switchboard.Plug {
-    private Gtk.Grid main_grid;
+    private MainView main_view;
 
     public Plug () {
         Object (category: Category.SYSTEM,
@@ -15,20 +14,19 @@ public class Backup.Plug : Switchboard.Plug {
     }
 
     public override Gtk.Widget get_widget () {
-        if (main_grid == null) {
-            setup_ui ();
+        if (main_view == null) {
+            main_view = new MainView();
         }
 
-        return main_grid;
+        return main_view;
     }
 
     public override void shown () {
-        main_grid.show_all ();
+        main_view.show_all ();
     }
 
     public override void hidden () {
-        main_grid.hide ();
-
+        main_view.hide ();
     }
 
     public override void search_callback (string location) {
@@ -41,19 +39,6 @@ public class Backup.Plug : Switchboard.Plug {
         search_results.set ("%s → %s".printf (display_name, _("copy")), "");
         search_results.set ("%s → %s".printf (display_name, _("Backup")), "");
         return search_results;
-    }
-
-    private void setup_ui () {
-        main_grid = new Gtk.Grid ();
-        main_grid.set_row_spacing (12);
-        main_grid.margin_top = 128;
-        main_grid.halign = Gtk.Align.CENTER;
-
-        /* BACKUP BUTTON */
-        Gtk.Button backup_button = new Gtk.Button.with_label (_("Start backup"));
-        backup_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
-        main_grid.attach (backup_button, 5, 5, 1, 1);
-
     }
 }
 
