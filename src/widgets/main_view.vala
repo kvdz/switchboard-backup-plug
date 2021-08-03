@@ -8,7 +8,7 @@
 
         var label_size = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
-        main_grid = new Gtk.Grid ();
+        var main_grid = new Gtk.Grid ();
         main_grid.set_row_spacing (12);
         main_grid.margin_top = 128;
         main_grid.halign = Gtk.Align.CENTER;
