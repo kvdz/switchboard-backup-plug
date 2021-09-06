@@ -1,4 +1,4 @@
-//*
+/*
  *   Copyright (C) 2021 Kay van der Zander
  */
 
@@ -9,8 +9,8 @@
     public bool recursive_search = True;
 
     BasicFileCopy() {
-        Files_to_copy = 0
-        Files_copied = 0
+        Files_to_copy = 0;
+        Files_copied = 0;
         recursive_search = True;
     }
 
