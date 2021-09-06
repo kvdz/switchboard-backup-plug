@@ -14,7 +14,7 @@
         recursive_search = True;
     }
 
-    public Run (string source, string destination) {
+    public void Run (string source, string destination) {
         MainLoop loop = new MainLoop ();
 
 	    // Copy my-test-1.txt to my-test-2.txt:
