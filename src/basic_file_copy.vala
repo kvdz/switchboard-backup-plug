@@ -6,12 +6,12 @@
  
     public int Files_to_copy = 0;   // number of files to be copied to destination
     public int Files_copied = 0;    // number of copied files to destination
-    public bool recursive_search = True;
+    public bool recursive_search = true;
 
     BasicFileCopy() {
         Files_to_copy = 0;
         Files_copied = 0;
-        recursive_search = True;
+        recursive_search = true;
     }
 
     public void Run (string source, string destination) {
