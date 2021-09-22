@@ -1,7 +1,7 @@
 plug_files = files(
     'Plug.vala',
     'backup_manager.vala',
-    'basic_file_copy.vala',
+    'services/basic_file_copy.vala',
     'widgets/main_view.vala',
     
 )
