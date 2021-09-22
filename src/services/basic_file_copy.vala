@@ -46,7 +46,8 @@
 		
 		foreach (string path in files_to_copy){
 			File file_source = File.new_for_path (path);
-	    	file_source.copy_async.begin (destination, 0, Priority.DEFAULT, null, null, (obj, res) => {
+			File file_destination = File.new_for_path (destination);
+	    	file_source.copy_async.begin (file_destination, 0, Priority.DEFAULT, null, null, (obj, res) => {
 		    	try {
 			    	bool tmp = file_source.copy_async.end (res);
 			    	print ("Result: %s\n", tmp.to_string ());
