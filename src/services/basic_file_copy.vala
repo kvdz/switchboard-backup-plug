@@ -17,9 +17,9 @@
     public void Run (string source, string destination) {
         MainLoop loop = new MainLoop ();
 
-	    // Copy my-test-1.txt to my-test-2.txt:
-	    File file1 = File.new_for_path ("my-test-1.txt");
-	    File file2 = File.new_for_path ("my-test-2.txt");
+	    File file1 = File.new_for_path (source);
+	    File file2 = File.new_for_path (destination);
+		
 	    file1.copy_async.begin (file2, 0, Priority.DEFAULT, null, (current_num_bytes, total_num_bytes) => { }, (obj, res) => {
 		    try {
 			    bool tmp = file1.copy_async.end (res);
