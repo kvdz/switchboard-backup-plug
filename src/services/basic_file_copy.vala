@@ -15,13 +15,13 @@
     }
 
 
-	private void list_files_recursive (string dir, List<string> files ) {
+	private void list_files_recursive (string directory, List<string> files ) {
 		try {
 			Dir dir = Dir.open(dir, 0);
 			string? name = null;
 
 			while ((name = dir.read_name ()) != null) {
-				string path = Path.build_filename (dir, name);
+				string path = Path.build_filename (directory, name);
 
 				if (FileUtils.test (path, FileTest.IS_DIR)) {
 					print ("%s\t%s\n", name, "| DIR ");
