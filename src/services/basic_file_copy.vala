@@ -44,13 +44,13 @@
 		Number_of_files_to_copy = files_to_copy.length();
 
 		
-		foreach (file in files_to_copy){
+		foreach (var file in files_to_copy){
 
 	    	file.copy_async.begin (file2, 0, Priority.DEFAULT, null, null, (obj, res) => {
 		    	try {
 			    	bool tmp = file1.copy_async.end (res);
 			    	print ("Result: %s\n", tmp.to_string ());
-					Files_copied + = 1;
+					Files_copied += 1;
 		    	} catch (Error e) {
 			    	print ("Error: %s\n", e.message);
 		    	}
