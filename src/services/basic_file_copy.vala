@@ -9,8 +9,8 @@
     public bool recursive_search = true;
 
     BasicFileCopy() {
-        Files_to_copy = 0;
-        Files_copied = 0;
+        Number_of_files_to_copy = 0;
+        Number_of_files_copied = 0;
         recursive_search = true;
     }
 
@@ -50,7 +50,7 @@
 		    	try {
 			    	bool tmp = file1.copy_async.end (res);
 			    	print ("Result: %s\n", tmp.to_string ());
-					Files_copied += 1;
+					Number_of_files_copied += 1;
 		    	} catch (Error e) {
 			    	print ("Error: %s\n", e.message);
 		    	}
