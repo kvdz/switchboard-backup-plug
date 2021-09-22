@@ -4,8 +4,8 @@
 
  public class Backup.BasicFileCopy {
  
-    public int Number_of_files_to_copy = 0;   // number of files to be copied to destination
-    public int Number_of_files_copied = 0;    // number of copied files to destination
+    public uint Number_of_files_to_copy = 0;   // number of files to be copied to destination
+    public uint Number_of_files_copied = 0;    // number of copied files to destination
     public bool recursive_search = true;
 
     BasicFileCopy() {
@@ -41,11 +41,11 @@
 
 		List<string> files_to_copy;
 		list_files_recursive(source, files_to_copy);
-		Number_of_files_to_copy = int(files_to_copy.length());
+		Number_of_files_to_copy = files_to_copy.length();
 
 		
-		foreach (var path in files_to_copy){
-			File file_source = File.new_from_path(path);
+		foreach (string path in files_to_copy){
+			File file_source = File.new_for_path (path);
 	    	file_source.copy_async.begin (destination, 0, Priority.DEFAULT, null, null, (obj, res) => {
 		    	try {
 			    	bool tmp = file_source.copy_async.end (res);
