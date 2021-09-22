@@ -17,7 +17,7 @@
 
 	private void list_files_recursive (string directory, List<string> files ) {
 		try {
-			Dir dir = Dir.open(dir, 0);
+			Dir dir = Dir.open(directory, 0);
 			string? name = null;
 
 			while ((name = dir.read_name ()) != null) {
@@ -41,14 +41,14 @@
 
 		List<string> files_to_copy;
 		list_files_recursive(source, files_to_copy);
-		Number_of_files_to_copy = files_to_copy.length();
+		Number_of_files_to_copy = int(files_to_copy.length());
 
 		
-		foreach (var file in files_to_copy){
-
-	    	file.copy_async.begin (file2, 0, Priority.DEFAULT, null, null, (obj, res) => {
+		foreach (var path in files_to_copy){
+			File file_source = File.new_from_path(path);
+	    	file_source.copy_async.begin (destination, 0, Priority.DEFAULT, null, null, (obj, res) => {
 		    	try {
-			    	bool tmp = file1.copy_async.end (res);
+			    	bool tmp = file_source.copy_async.end (res);
 			    	print ("Result: %s\n", tmp.to_string ());
 					Number_of_files_copied += 1;
 		    	} catch (Error e) {
