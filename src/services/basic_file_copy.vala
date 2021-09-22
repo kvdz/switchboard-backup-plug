@@ -39,9 +39,9 @@
     public void Execute (string source, string destination) {
         MainLoop loop = new MainLoop ();
 
-		List<string> files_to_copy;
+		List<string>  = {};
 		list_files_recursive(source, files_to_copy);
-		Number_of_files_to_copy = files_to_copy.length();
+		this.Number_of_files_to_copy = files_to_copy.length();
 
 		
 		foreach (string path in files_to_copy){
@@ -51,7 +51,7 @@
 		    	try {
 			    	bool tmp = file_source.copy_async.end (res);
 			    	print ("Result: %s\n", tmp.to_string ());
-					Number_of_files_copied += 1;
+					this.Number_of_files_copied += 1;
 		    	} catch (Error e) {
 			    	print ("Error: %s\n", e.message);
 		    	}
