@@ -39,7 +39,7 @@
     public void Execute (string source, string destination) {
         MainLoop loop = new MainLoop ();
 
-		List<string> files_to_copy = {};
+		List<string> files_to_copy = new List<string>();
 		list_files_recursive(source, files_to_copy);
 		this.Number_of_files_to_copy = files_to_copy.length();
 
